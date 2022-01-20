@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<script src="./script.js" defer></script>
+	<title>Library</title>
+</head>
+<body>
+	<header>
+		My library
+	</header>
+	<div class="form">
+		<form id="add-book-form" autocomplete="off">
+			<div>
+				<label for="title-input">Title</label>
+				<input type="text" id="title-input" required placeholder="type in book title here">
+			</div>
+			<div>
+				<label for="author-input">Author</label>
+				<input type="text" id="author-input">
+			</div>
+			<div>
+				<label for="pages-input">Pages</label>
+				<input type="number" id="pages-input">
+			</div>
+			<div>
+				<label for="genre-input">Genre</label>
+				<input type="text" id="genre-input">
+			</div>
+			<div>
+				<label for="is-read-input">Did you read it?</label>
+				<input type="checkbox" id="is-read-input">
+			</div>
+			<div>
+				<input type="submit" id="submit-book" value="add book">
+			</div>
+		</form>
+	</div>
+	<section class="book-list">
+		<h2>My library</h2>
+		<table class="library">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Author</th>
+					<th>Pages</th>
+					<th>Genre</th>
+					<th>Did you read it?</th>
+				</tr>
+			</thead>
+			<tbody class="library-table-body">
+				
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>

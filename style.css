@@ -1,0 +1,19 @@
+body {
+	font-size: 50px;
+}
+
+button {
+	width: 140px;
+	height: 25px;
+}
+td {
+	border: solid 1px black;
+}
+
+.book-read {
+	background: green;
+}
+
+.book-not-read {
+	background: red;
+}
