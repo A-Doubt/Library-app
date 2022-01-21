@@ -9,38 +9,45 @@
 	<title>Library</title>
 </head>
 <body>
-	<header>
-		My library
-	</header>
+
 	<div class="form">
+		<header class="side-header">
+			My library
+		</header>
 		<form id="add-book-form" autocomplete="off">
 			<div>
-				<label for="title-input">Title</label>
-				<input type="text" id="title-input" required placeholder="type in book title here">
+				<label for="title-input"></label>
+				<input type="text" id="title-input" required placeholder="Book title">
 			</div>
 			<div>
-				<label for="author-input">Author</label>
-				<input type="text" id="author-input">
+				<label for="author-input"></label>
+				<input type="text" id="author-input" placeholder="Book author">
 			</div>
 			<div>
-				<label for="pages-input">Pages</label>
-				<input type="number" id="pages-input">
+				<label for="pages-input"></label>
+				<input type="number" id="pages-input" placeholder="number of pages">
 			</div>
 			<div>
-				<label for="genre-input">Genre</label>
-				<input type="text" id="genre-input">
+				<label for="genre-input"></label>
+				<input type="text" id="genre-input" placeholder="genre">
 			</div>
-			<div>
-				<label for="is-read-input">Did you read it?</label>
-				<input type="checkbox" id="is-read-input">
-			</div>
-			<div>
-				<input type="submit" id="submit-book" value="add book">
+			<div class="is-read-container">
+				<label for="is-read-input"></label>
+				<select required id="is-read-input">
+				<option value="">Have you read this book?</option>
+				<option value="true">Yes</option>
+				<option value="false">No</option>
+				<div>
+					<input type="hidden">
+				</div>
+				<div class="container">
+					<input type="submit" id="submit-book" value="add book">
+				</div>
 			</div>
 		</form>
 	</div>
 	<section class="book-list">
-		<h2>My library</h2>
+		<h2>Books</h2>
 		<table class="library">
 			<thead>
 				<tr>
@@ -48,11 +55,10 @@
 					<th>Author</th>
 					<th>Pages</th>
 					<th>Genre</th>
-					<th>Did you read it?</th>
+					<th>Status</th>
 				</tr>
 			</thead>
 			<tbody class="library-table-body">
-				
 			</tbody>
 		</table>
 	</section>

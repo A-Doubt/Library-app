@@ -10,7 +10,7 @@ addBookForm.addEventListener('submit', function(e) {
 	const authorInput = addBookForm.querySelector('#author-input').value;
 	const pagesInput = addBookForm.querySelector('#pages-input').value;
 	const genreInput = addBookForm.querySelector('#genre-input').value;
-	const isReadInput = addBookForm.querySelector('#is-read-input').checked;
+	const isReadInput = addBookForm.querySelector('#is-read-input').value;
 	myLibrary.push(new book(titleInput, authorInput, pagesInput, genreInput, isReadInput));
 
 	const tableBody = document.getElementsByClassName('library-table-body')[0]; //grabing the whole table (library)
@@ -75,13 +75,14 @@ addBookForm.addEventListener('submit', function(e) {
 	const deleteButton = document.createElement('button');
 	deleteButton.classList.add('delete');
 	thDeleteButton.appendChild(deleteButton);
-	deleteButton.textContent = 'DELETE';
+	deleteButton.textContent = 'X';
 	tableRow.appendChild(thDeleteButton);
 	deleteButton.addEventListener('click', () => {
 		tableBody.removeChild(tableRow);
 	});
 
 	tableBody.appendChild(tableRow);
+	addBookForm.reset();
 });
 
 
